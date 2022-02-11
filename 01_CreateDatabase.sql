@@ -56,7 +56,7 @@ WITH
 )
 
 INSERT INTO dbo.Solution WITH (TABLOCKX)
-(Word) 
+(Word)
 SELECT s.Word FROM #Stage AS s
 OPTION (MAXDOP 1)
 
@@ -73,14 +73,14 @@ WITH
 )
 
 INSERT INTO dbo.Available WITH (TABLOCKX)
-(Word) 
+(Word)
 SELECT s.Word FROM #Stage AS s
 OPTION (MAXDOP 1)
 
 GO
 CREATE OR ALTER VIEW dbo.AllWords
 AS
-SELECT 
+SELECT
 	s.Id
 	, s.Word
 	, s.SolveDate
